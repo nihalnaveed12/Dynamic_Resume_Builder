@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="resume.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <a href="/index.html"><img src="https://www.riseservices.org/wp-content/uploads/2023/02/ResumeBuilder-Logo-PNG.png" alt="Resume Builder Logo" class="logo"></a>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#templates">Templates</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="auth-buttons">
+            <a href="#sign-in" class="sign-in">Sign In</a>
+            <a href="#sign-up" class="sign-up-btn">Get Started</a>
+        </div>
+        <div class="mobile-menu-icon">&#9776;</div>
+    </nav>
+    <div class="content">
+        <h1 class="heading1">Create Your Dynamic Resume</h1>
+        <div class="form-section">
+            <form class="form-input"> 
+                
+                
+              personal info
+               <div class="Personal Information">
+                    <h3>Personal Information</h3>
+                    <div>
+                        <label for="profile-pic">Upload Profile Picture:</label>
+                        <input type="file" id="profile-pic" name="profile-pic" accept="image/*">
+                    </div>
+
+                    <div><label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" placeholder="firstName">
+                    </div>
+
+                    <div>
+                        <label for="lastName">Your Last Name</label>
+                        <input type="text" id="lastName" name="lastName" placeholder="lastName">
+                    </div>
+
+                    <!-- job-title -->
+
+                     <div>
+                        <label for="job-title">Job Title</label>
+                        <input type="text" id="job-title" name="job-title" placeholder="write your job title">
+                    </div>
+               </div>
+
+              <!-- contact-details -->
+              <div class="contact-details">
+                    <h3>Contact Details</h3>
+                    <div>
+                        <label for="phone">Phone Number:</label>
+                        <input type="text" id="phone" name="phone">
+                    </div>
+                    <div>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email">
+                    </div>
+                    <div>
+                        <label for="linkedin">LinkedIn Profile:</label>
+                        <input type="url" id="linkedin" name="linkedin">
+                    </div>
+               </div>
+
+               <!-- address -->
+               <div>
+                    <label for="address">Address:</label>
+                    <textarea id="address" name="address" rows="2"></textarea>
+               </div>
+
+               <!-- education section -->
+               <div class="secondary-education">
+                    <h3>Secondary Education</h3>
+                    <label for="education">Education:</label>
+                    <input type="text" id="education" name="education" placeholder="Education">
+               </div>
+
+               <!-- Institute -->
+               <div>
+                    <label for="institute">Institute:</label>
+                    <input type="text" id="institute" name="institute" placeholder="Institute">
+               </div>
+
+               <!-- Start and End -->
+               <div>
+                    <label for="start-date">Start Date:</label>
+                    <input type="date" id="start-date" name="start-date" placeholder="Start-Date">
+
+                    <label for="end-date">End Date:</label>
+                    <input type="date" id="end-date" name="end-date" placeholder="End-Date">
+               </div>
+
+               <!-- higher education section -->
+               <div class="higher-education">
+                    <h3>Higher Education</h3>
+                    <label for="higher-education">Higher Education:</label>
+                    <input type="text" id="higher-education" name="higher-education" placeholder="Higher Education">
+               </div>
+
+               <!-- Degree -->
+               <div>
+                    <label for="degree">Your Degree:</label>
+                    <input type="text" id="degree" name="degree" placeholder="e.g. B.Sc in Computer Science">
+               </div>
+
+               <!-- skill section -->
+               <div id="skills-section">
+                    <h3>Skills</h3>
+                    <label for="skill">Add Skill:</label>
+                    <input type="text" id="skill" name="skill">
+
+                    <label for="skill-level">Skill Level:</label>
+                    <select id="skill-level" name="skill-level">
+                      <option value="beginner">Beginner</option>
+                      <option value="intermediate">Intermediate</option>
+                      <option value="advanced">Advanced</option>
+                    </select>
+
+                    <button id="add-skill-button">Add Skill</button>
+                    
+                    <div id="added-skills">
+                    </div>
+               </div>
+
+               <!-- projects section -->
+               <div id="projects-section">
+                    <h3>Projects</h3>
+                    <button id="add-project-button">Add Project</button>
+
+                    <div id="added-projects">
+                    </div>
+               </div>
+               <div class="generate-resume">
+                <button type="button" id="generate-resume-button">Generate Resume</button>
+            </div>
+            
+               <!-- Live Preview Section -->
+               <div class="preview-section">
+                    <h3>Resume Preview</h3>
+                    <div id="live-preview">
+                        <p id="preview-name">Name: </p>
+                        <p id="preview-job-title">Job Title: </p>
+                        <p id="preview-contact">Contact: </p>
+                        <p id="preview-education">Education: </p>
+                        <p id="preview-skills">Skills: </p>
+                    </div>
+               </div>
+            </form>
+        </div>
+
+        <!-- Google Maps API Key -->
+        <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places"></script>
+
+    </div>
+
+    <!-- External JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="script.js"></script>
+
+
+
+
+<!-- Footer Section -->
+<footer>
+    <div class="footer-content">
+        <div class="footer-logo-social">
+            <div class="footer-logo">
+               <a href="/index.html"> <img src="https://www.riseservices.org/wp-content/uploads/2023/02/ResumeBuilder-Logo-PNG.png" alt="Logo" class="footer-logo-img"></a>
+                <p>Build your dream resume with ease and stand out in the job market.</p>
+            </div>
+
+            <div class="footer-social">
+                <a href="https://www.facebook.com/profile.php?id=61561036515275" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.linkedin.com/public-profile/settings?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_self_edit_contact-info%3Bv1ElT%2B%2F5RRqwtlLEhvkf7Q%3D%3D" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://x.com/TahiraRajput07" target="_blank"><i class="fab fa-twitter"></i></a>
+
+            </div>
+
+            <div class="footer-contact">
+                <p>Email: tara378581@gmail.com</p>
+                <p>Phone: +123 456 7890</p>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024 Resume Builder. All Rights Reserved. | Designed by Tahira Rajput</p>
+
+    </div>
+</footer>
+
+<script src="resume.js"></script>
+</body>
+</html>

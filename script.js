@@ -1,27 +1,30 @@
-var _a, _b;
-(_a = document.getElementById("addSkillButton")) === null || _a === void 0 ? void 0 : _a.addEventListener("click", function () {
-    var skillsContainer = document.getElementById("skillsContainer");
-    if (skillsContainer) {
-        var newSkillInput = document.createElement("input");
-        newSkillInput.type = "text";
-        newSkillInput.name = "skills[]";
-        newSkillInput.placeholder = "Enter a skill";
-        newSkillInput.required = true;
-        skillsContainer.appendChild(newSkillInput);
-    }
-});
-(_b = document.getElementById("resumeForm")) === null || _b === void 0 ? void 0 : _b.addEventListener("submit", function (event) {
-    event.preventDefault(); // Prevent form refresh
-    var formElement = this;
-    var formData = new FormData(formElement);
-    var resumePreview = document.getElementById("resumePreview");
-    if (resumePreview) {
-        var firstName = formData.get("firstName");
-        var lastName = formData.get("lastName");
-        var email = formData.get("email");
-        var education = formData.get("education");
-        var experience = formData.get("experience");
-        var skills = formData.getAll("skills[]").join(", ");
-        resumePreview.innerHTML = "\n          <h2>Resume Preview</h2>\n          <p><strong>First Name:</strong> <span class=\"editable\">".concat(firstName !== null && firstName !== void 0 ? firstName : 'N/A', "</span></p>\n          <p><strong>Last Name:</strong> <span class=\"editable\">").concat(lastName !== null && lastName !== void 0 ? lastName : 'N/A', "</span></p>\n          <p><strong>Email:</strong> <span class=\"editable\">").concat(email !== null && email !== void 0 ? email : 'N/A', "</span></p>\n          <p><strong>Education:</strong> <span class=\"editable\">").concat(education !== null && education !== void 0 ? education : 'N/A', "</span></p>\n          <p><strong>Work Experience:</strong> <span class=\"editable\">").concat(experience !== null && experience !== void 0 ? experience : 'N/A', "</span></p>\n          <p><strong>Skills:</strong> <span class=\"editable\">").concat(skills ? skills : 'N/A', "</span></p>\n      ");
-    }
+document.addEventListener('DOMContentLoaded', function () {
+    // Navbar Elements
+    var mobileMenuIcon = document.querySelector('.mobile-menu-icon');
+    var navLinks = document.querySelector('.nav-links');
+    var signInButton = document.querySelector('.sign-in');
+    var signUpButton = document.querySelector('.sign-up-btn');
+    // Parent Box Elements
+    var startButton = document.querySelector('#left-box a button');
+    // Footer Elements
+    var footerLogo = document.querySelector('.footer-logo-img');
+    var footerSocialLinks = document.querySelectorAll('.footer-social a');
+    var footerContact = document.querySelector('.footer-contact');
+    // Mobile Menu Toggle
+    mobileMenuIcon.addEventListener('click', function () {
+        navLinks.classList.toggle('active');
+    });
+    // Start Button Click Event
+    startButton.addEventListener('click', function () {
+        window.location.href = 'resume.html'; // Redirect to the resume creation page
+    });
+    // Footer Social Links Event
+    footerSocialLinks.forEach(function (link) {
+        link.addEventListener('click', function (event) {
+            event.preventDefault(); // Prevent default behavior for testing or logging
+            console.log("Redirecting to: ".concat(link.href));
+        });
+    });
+    // Footer Contact Info
+    footerContact.innerHTML = "<p>Email: tara378581@gmail.com</p><p>Phone: +123 456 7890</p>";
 });

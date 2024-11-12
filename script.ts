@@ -1,79 +1,35 @@
-<<<<<<< HEAD
-document.getElementById("addSkillButton")?.addEventListener("click", function () {
-  const skillsContainer = document.getElementById("skillsContainer") as HTMLDivElement | null;
-  if (skillsContainer) {
-      const newSkillInput = document.createElement("input");
-      newSkillInput.type = "text";
-      newSkillInput.name = "skills[]";
-      newSkillInput.placeholder = "Enter a skill";
-      newSkillInput.required = true;
-      skillsContainer.appendChild(newSkillInput);
-  }
+document.addEventListener('DOMContentLoaded', () => {
+    
+    const mobileMenuIcon = document.querySelector('.mobile-menu-icon') as HTMLElement;
+    const navLinks = document.querySelector('.nav-links') as HTMLElement;
+    const signInButton = document.querySelector('.sign-in') as HTMLElement;
+    const signUpButton = document.querySelector('.sign-up-btn') as HTMLElement;
+
+    
+    const startButton = document.querySelector('#left-box a button') as HTMLButtonElement;
+
+    const footerLogo = document.querySelector('.footer-logo-img') as HTMLImageElement;
+    const footerSocialLinks = document.querySelectorAll('.footer-social a') as NodeListOf<HTMLAnchorElement>;
+    const footerContact = document.querySelector('.footer-contact') as HTMLElement;
+
+
+    mobileMenuIcon.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+    });
+
+  
+    startButton.addEventListener('click', () => {
+        window.location.href = 'resume.html';
+    });
+
+    
+    footerSocialLinks.forEach(link => {
+        link.addEventListener('click', (event) => {
+            event.preventDefault();
+            console.log(`Redirecting to: ${link.href}`);
+        });
+    });
+
+
+    footerContact.innerHTML = `<p>Email: tara378581@gmail.com</p><p>Phone: +123 456 7890</p>`;
 });
-
-document.getElementById("resumeForm")?.addEventListener("submit", function (event: Event) {
-  event.preventDefault(); // Prevent form refresh
-
-  const formElement = this as HTMLFormElement;
-  const formData = new FormData(formElement);
-  const resumePreview = document.getElementById("resumePreview") as HTMLDivElement | null;
-
-  if (resumePreview) {
-      const firstName = formData.get("firstName") as string | null;
-      const lastName = formData.get("lastName") as string | null;
-      const email = formData.get("email") as string | null;
-      const education = formData.get("education") as string | null;
-      const experience = formData.get("experience") as string | null;
-      const skills = formData.getAll("skills[]").join(", ");
-
-      resumePreview.innerHTML = `
-          <h2>Resume Preview</h2>
-          <p><strong>First Name:</strong> <span class="editable">${firstName ?? 'N/A'}</span></p>
-          <p><strong>Last Name:</strong> <span class="editable">${lastName ?? 'N/A'}</span></p>
-          <p><strong>Email:</strong> <span class="editable">${email ?? 'N/A'}</span></p>
-          <p><strong>Education:</strong> <span class="editable">${education ?? 'N/A'}</span></p>
-          <p><strong>Work Experience:</strong> <span class="editable">${experience ?? 'N/A'}</span></p>
-          <p><strong>Skills:</strong> <span class="editable">${skills ? skills : 'N/A'}</span></p>
-      `;
-  }
-});
-=======
-document.getElementById("addSkillButton")?.addEventListener("click", function () {
-  const skillsContainer = document.getElementById("skillsContainer") as HTMLDivElement | null;
-  if (skillsContainer) {
-      const newSkillInput = document.createElement("input");
-      newSkillInput.type = "text";
-      newSkillInput.name = "skills[]";
-      newSkillInput.placeholder = "Enter a skill";
-      newSkillInput.required = true;
-      skillsContainer.appendChild(newSkillInput);
-  }
-});
-
-document.getElementById("resumeForm")?.addEventListener("submit", function (event: Event) {
-  event.preventDefault(); // Prevent form refresh
-
-  const formElement = this as HTMLFormElement;
-  const formData = new FormData(formElement);
-  const resumePreview = document.getElementById("resumePreview") as HTMLDivElement | null;
-
-  if (resumePreview) {
-      const firstName = formData.get("firstName") as string | null;
-      const lastName = formData.get("lastName") as string | null;
-      const email = formData.get("email") as string | null;
-      const education = formData.get("education") as string | null;
-      const experience = formData.get("experience") as string | null;
-      const skills = formData.getAll("skills[]").join(", ");
-
-      resumePreview.innerHTML = `
-          <h2>Resume Preview</h2>
-          <p><strong>First Name:</strong> <span class="editable">${firstName ?? 'N/A'}</span></p>
-          <p><strong>Last Name:</strong> <span class="editable">${lastName ?? 'N/A'}</span></p>
-          <p><strong>Email:</strong> <span class="editable">${email ?? 'N/A'}</span></p>
-          <p><strong>Education:</strong> <span class="editable">${education ?? 'N/A'}</span></p>
-          <p><strong>Work Experience:</strong> <span class="editable">${experience ?? 'N/A'}</span></p>
-          <p><strong>Skills:</strong> <span class="editable">${skills ? skills : 'N/A'}</span></p>
-      `;
-  }
-});
->>>>>>> 90b479ab5d7b0ca48d0811a89a539eddf4fa2f3a

@@ -1,57 +1,74 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dynamic Resume Builder</title>
+    <title>Professional Resume Builder</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
-    <div class="container">
 
-        <h1>Dynamic Resume Builder </h1>
-
-        <hr>
-        <form id="resumeForm">
-            <h2>Personal Information</h2>
-
-            <h2>Name</h2>
-            <label for="firstName">First Name*</label>
-            <input type="text" id="firstName" placeholder="Name" name="firstName" required>
-            <label for="lastName">Last Name*</label>
-            <input type="text" id="lastName" placeholder="last Name" name="lastName" required>
-            <h2>Email*</h2>
-            <label for="email">Email*</label>
-            <input type="email" id="email" placeholder="Email Adress" name="email" required>
-
-            <h2>Education</h2>
-            <label for="email">Education*</label>
-            <input type="text" id="education" placeholder="Education" name="education" required>
-
-            <h2>Work Experience</h2>
-            <label for="email">Experience*</label>
-            <textarea id="experience" name="experience" placeholder="Experience" required></textarea>
-
-            <h2>Skills</h2>
-            <div id="skillsContainer">
-                <input type="text" name="skills[]" placeholder="Enter a skill" required>
-            </div>
-            <button type="button" id="addSkillButton">Add Another Skill</button>
-            <br>
-            <br>
-
-            <button type="submit">Generate Resume</button>
-        </form>
-        <br>
-
-        <div id="resumePreview">
-            <big>Resume Preview</big>
-        </div>
-        <div id="creator"><p>created by Tahira Rajput</p></div>
+<nav>
+    <a href="/index.html"><img src="https://www.riseservices.org/wp-content/uploads/2023/02/ResumeBuilder-Logo-PNG.png" alt="Resume Builder Logo" class="logo"></a>
+    <ul class="nav-links">
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#templates">Templates</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="auth-buttons">
+        <a href="#sign-in" class="sign-in">Sign In</a>
+        <a href="#sign-up" class="sign-up-btn">Get Started</a>
     </div>
+    <div class="mobile-menu-icon">&#9776;</div>
+</nav>
 
-    <script src="script.js"></script>
+<div id="parent-div">
+    <div id="left-box">
+        <h1>Stand Out in the Job Create Your Dream Resume</h1>
+        <p>Make your resume the best it can be! With our easy-to-use Resume Builder, you'll have a professional resume ready in no time. Tailor it to your needs, download it as a PDF, and start applying for your dream job today!</p>
+        <a href="resume.html"><button>Start Creating</button></a>
+    </div>
+    <div id="right-box">
+        <video loop autoplay muted playsinline class="video">
+            <source src="https://www.freshresume.co/video/Freshresume_t1_new.mp4" type="video/mp4">
+        </video>
+    </div>
+</div>
+
+<!-- Footer Section -->
+<footer>
+    <div class="footer-content">
+        <div class="footer-logo-social">
+            <div class="footer-logo">
+               <a href="/index.html"> <img src="https://www.riseservices.org/wp-content/uploads/2023/02/ResumeBuilder-Logo-PNG.png" alt="Logo" class="footer-logo-img"></a>
+                <p>Build your dream resume with ease and stand out in the job market.</p>
+            </div>
+
+            <div class="footer-social">
+                <a href="https://www.facebook.com/profile.php?id=61561036515275" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.linkedin.com/public-profile/settings?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_self_edit_contact-info%3Bv1ElT%2B%2F5RRqwtlLEhvkf7Q%3D%3D" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://x.com/TahiraRajput07" target="_blank"><i class="fab fa-twitter"></i></a>
+
+            </div>
+
+            <div class="footer-contact">
+                <p>Email: tara378581@gmail.com</p>
+                <p>Phone: +123 456 7890</p>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024 Resume Builder. All Rights Reserved. | Designed by Tahira Rajput</p>
+
+    </div>
+</footer>
+
+
+<script src="script.js"></script>
 </body>
 </html>
