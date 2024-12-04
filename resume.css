@@ -1,4 +1,4 @@
-/* General Styling */
+
 * {
     margin: 0;
     padding: 0;
@@ -93,6 +93,9 @@ nav {
     cursor: pointer;
 }
 
+
+
+
 /* Form Styling */
 .form-section {
     background-color: white;
@@ -101,6 +104,8 @@ nav {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column; 
 }
 
 h3 {
@@ -147,34 +152,214 @@ button:hover {
     background-color: #1abc9c;
 }
 
-/* Preview Section */
-.preview-section {
-    background-color: #ecf0f1;
-    padding: 15px;
-    margin-top: 30px;
-    border-radius: 8px;
+
+.right-align {
+    margin-left: auto;
 }
 
-.preview-section h3 {
-    color: #2c3e50;
+/* Initially, hide the resume design when the page loads */
+#resume-container {
+    display: none;
+  }
+  
+  /* Styling for generating the PDF */
+  .generate-resume {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .resume-container {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+  }
+  
+  /* Hide the design during the PDF generation */
+  .hidden-for-pdf {
+    display: none;
+  }
+  .hide {
+    display: none;
+  }
+    
+
+
+
+
+
+
+/* resume */
+.profile-pic{
+    border: 2px solid white;
+}
+.resume-container {
+    display: flex;
+    max-width: 800px;
+    margin: 20px auto;
+    border: 1px solid #ddd;
 }
 
-#live-preview p {
+.left-sidebar {
+    background-color: #272626;
+    color: #faf7f7;
+    padding: 20px;
+    width: 30%;
+    text-align: center;
+}
+
+.right-section {
+    padding: 20px;
+    width: 70%;
+}
+
+.right-section li{
+    list-style: none;
+}
+
+.profile-pic {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+.profile {
+    margin-right: 4px;
+    color: #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+i {
+    margin-right: 1vw;
+}
+
+h2 {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #1d1b1b;
+}
+.left-sidebar h2,h3{
+    color: #ddd;
+}
+
+h3 {
     font-size: 16px;
-    margin: 5px 0;
+    color: #292828;
 }
 
-#added-skills, #added-projects {
-    margin-top: 10px;
+p {
+    font-size: 12px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    font-family: Arial, sans-serif;
 }
+
+.contact-div {
+    margin-right: 4px;
+    color: #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.skills {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.skills h2 {
+    font-size: 18px;
+    color: #f3efef;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.skills i {
+    margin-right: 10px;
+    color: #f3efef;
+}
+
+.skills ul {
+    list-style-type: none;
+    padding-left: 0;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #ddd;
+}
+
+.skills ul li {
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.skills ul li::before {
+    content: "•"; 
+    margin-right: 8px;
+    color: #f3efef;
+    font-size: 18px;
+}
+
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    color: #ddd;
+    margin-bottom: 8px;
+}
+.fa-solid{
+    padding-bottom: 4px;
+}
+
+
+.contact-item i {
+    margin-right: 8px;
+}
+
+
+
+.education, .experience {
+    margin-bottom: 20px;
+}
+.download-btn {
+    background-color: #141414;
+    color: white; 
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.download-btn:hover {
+    background-color: #161616;
+}
+/* ////////////////// */
 
 footer {
-    background: linear-gradient(135deg, #020246, #07011a ,#030333); /* Smooth gradient effect */
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #020246, #07011a ,#030333); 
     color: #ffffff;
     padding: 40px 20px;
     text-align: center;
     margin-top: 10%;
 }
+.designer{
+    font-size:1vw ;
+    font-weight:700 ;
+  }
 
 .footer-content {
     display: flex;

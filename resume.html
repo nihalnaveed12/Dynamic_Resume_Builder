@@ -12,9 +12,6 @@
         <a href="/index.html"><img src="https://www.riseservices.org/wp-content/uploads/2023/02/ResumeBuilder-Logo-PNG.png" alt="Resume Builder Logo" class="logo"></a>
         <ul class="nav-links">
             <li><a href="#home">Home</a></li>
-            <li><a href="#features">Features</a></li>
-            <li><a href="#templates">Templates</a></li>
-            <li><a href="#pricing">Pricing</a></li>
             <li><a href="#about">About Us</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
@@ -27,150 +24,278 @@
     <div class="content">
         <h1 class="heading1">Create Your Dynamic Resume</h1>
         <div class="form-section">
-            <form class="form-input"> 
+             
                 
                 
-              personal info
-               <div class="Personal Information">
-                    <h3>Personal Information</h3>
-                    <div>
-                        <label for="profile-pic">Upload Profile Picture:</label>
-                        <input type="file" id="profile-pic" name="profile-pic" accept="image/*">
+                <form class="resume-form" id="resume-form">
+profile-pic                  <div class="left">
+                      <!-- Personal Information -->
+                      <div class="personal-info">
+                        <h3>Personal Information</h3>
+                        <div>
+                            <label for="profile-pic">Upload Profile Picture:</label>
+                            <input type="file" id="profile-pic" name="profile-pic" accept="image/*" class="image">
+                        </div>
+                        <div>
+                            <label for="about-me"><h3>About Me</h3></label>
+                            <textarea name="about" id="about" class="about-me" rows="10" cols="10" placeholder="Please write something about yourself!"></textarea>
+                          </div>
+                          <button id="update-about">Update About Me</button>
+                       
                     </div>
-
-                    <div><label for="name">Your Name</label>
-                        <input type="text" id="name" name="name" placeholder="firstName">
+                
+                    <!-- Contact Information -->
+                    <div class="contact-info">
+                        <h3>Contact</h3>
+                        <div>
+                            <label for="phone">Phone Number:</label>
+                            <input type="text" id="phone" name="phone" class="phone">
+                        </div>
+                        <div>
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" class="email">
+                        </div>
+                        <div>
+                            <label for="address">Address</label>
+                            <textarea name="address" id="address" class="address" placeholder="Your Address"></textarea>
+                        </div>
                     </div>
-
-                    <div>
-                        <label for="lastName">Your Last Name</label>
-                        <input type="text" id="lastName" name="lastName" placeholder="lastName">
+                    <div id="skills-conainer">
+                        <h3>Skills</h3>
+                        <label for="skill">Add Skill:</label>
+                        <input type="text" id="skill-input" name="skill" />
+                        <label for="skill-level">Skill Level:</label>
+                        <select id="skill-level" name="skill-level">
+                          <option value="beginner">Beginner</option>
+                          <option value="intermediate">Intermediate</option>
+                          <option value="advanced">Advanced</option>
+                        </select>
+                        <button type="button" id="add-skill">Add Skill</button>
+                      </div>
+                      
+                    <!-- Languages Section -->
+                    <div id="languages-section">
+                        <h3>Languages</h3>
+                        <input type="text" placeholder="Languages" class="languagefield" id="languagefield">
                     </div>
+                  </div>
+                
+                <div class="right">
+                   <div>
+                    <label for="namefield">Name</label>
+                    <input type="text" placeholder="Your Name" class="namefield" id="name">
+                   </div>
 
-                    <!-- job-title -->
+                   <div>
+                    <label for="tittle">Tittle</label>
+                    <input type="text" placeholder="tittl" class="tittlfield" id="tittle">
+                   </div>
 
-                     <div>
-                        <label for="job-title">Job Title</label>
-                        <input type="text" id="job-title" name="job-title" placeholder="write your job title">
+                    <!-- Education Section -->
+                    <div id="education-section">
+                        <h3>Education</h3>
+                        <div>
+                            <label for="degree">Degree</label>
+                            <input type="text" id="degree" name="degree" placeholder="Degree" class="education">
+                        </div>
+                        <div>
+                            <label for="institute">Institute</label>
+                            <input type="text" id="institute" name="institute" placeholder="Institute">
+                        </div>
+                        <div>
+                            <label for="start-date">Start Date</label>
+                            <input type="date" id="start-date" name="start-date">
+                        </div>
+                        <div>
+                            <label for="end-date">End Date</label>
+                            <input type="date" id="end-date" name="end-date">
+                        </div>
+                        <button type="button" id="add-education" class="add-education">Add Education</button>
                     </div>
-               </div>
-
-              <!-- contact-details -->
-              <div class="contact-details">
-                    <h3>Contact Details</h3>
-                    <div>
-                        <label for="phone">Phone Number:</label>
-                        <input type="text" id="phone" name="phone">
-                    </div>
-                    <div>
-                        <label for="email">Email:</label>
-                        <input type="email" id="email" name="email">
-                    </div>
-                    <div>
-                        <label for="linkedin">LinkedIn Profile:</label>
-                        <input type="url" id="linkedin" name="linkedin">
-                    </div>
-               </div>
-
-               <!-- address -->
-               <div>
-                    <label for="address">Address:</label>
-                    <textarea id="address" name="address" rows="2"></textarea>
-               </div>
-
-               <!-- education section -->
-               <div class="secondary-education">
-                    <h3>Secondary Education</h3>
-                    <label for="education">Education:</label>
-                    <input type="text" id="education" name="education" placeholder="Education">
-               </div>
-
-               <!-- Institute -->
-               <div>
-                    <label for="institute">Institute:</label>
-                    <input type="text" id="institute" name="institute" placeholder="Institute">
-               </div>
-
-               <!-- Start and End -->
-               <div>
-                    <label for="start-date">Start Date:</label>
-                    <input type="date" id="start-date" name="start-date" placeholder="Start-Date">
-
-                    <label for="end-date">End Date:</label>
-                    <input type="date" id="end-date" name="end-date" placeholder="End-Date">
-               </div>
-
-               <!-- higher education section -->
-               <div class="higher-education">
-                    <h3>Higher Education</h3>
-                    <label for="higher-education">Higher Education:</label>
-                    <input type="text" id="higher-education" name="higher-education" placeholder="Higher Education">
-               </div>
-
-               <!-- Degree -->
-               <div>
-                    <label for="degree">Your Degree:</label>
-                    <input type="text" id="degree" name="degree" placeholder="e.g. B.Sc in Computer Science">
-               </div>
-
-               <!-- skill section -->
-               <div id="skills-section">
-                    <h3>Skills</h3>
-                    <label for="skill">Add Skill:</label>
-                    <input type="text" id="skill" name="skill">
-
-                    <label for="skill-level">Skill Level:</label>
-                    <select id="skill-level" name="skill-level">
-                      <option value="beginner">Beginner</option>
-                      <option value="intermediate">Intermediate</option>
-                      <option value="advanced">Advanced</option>
-                    </select>
-
-                    <button id="add-skill-button">Add Skill</button>
-                    
-                    <div id="added-skills">
-                    </div>
-               </div>
-
-               <!-- projects section -->
-               <div id="projects-section">
-                    <h3>Projects</h3>
-                    <button id="add-project-button">Add Project</button>
-
-                    <div id="added-projects">
-                    </div>
-               </div>
-               <div class="generate-resume">
-                <button type="button" id="generate-resume-button">Generate Resume</button>
-            </div>
-            
-               <!-- Live Preview Section -->
-               <div class="preview-section">
-                    <h3>Resume Preview</h3>
-                    <div id="live-preview">
-                        <p id="preview-name">Name: </p>
-                        <p id="preview-job-title">Job Title: </p>
-                        <p id="preview-contact">Contact: </p>
-                        <p id="preview-education">Education: </p>
-                        <p id="preview-skills">Skills: </p>
-                    </div>
-               </div>
-            </form>
+                
+                        <!-- Experience Section -->
+    <div id="experience-section">
+        <h3>Experience</h3>
+        <div>
+            <label for="job-title">Job Title</label>
+            <input type="text" id="job-title" name="job-title" placeholder="Job Title">
         </div>
-
-        <!-- Google Maps API Key -->
-        <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places"></script>
-
+        <div>
+            <label for="company">Company</label>
+            <input type="text" id="company" name="company" placeholder="Company">
+        </div>
+        <div>
+            <label for="exp-start-date">Start Date</label>
+            <input type="date" id="exp-start-date" name="exp-start-date">
+        </div>
+        <div>
+            <label for="exp-end-date">End Date</label>
+            <input type="date" id="exp-end-date" name="exp-end-date">
+        </div>
+        <button type="button" id="add-experience" class="add-experience">Add Experience</button>
     </div>
 
-    <!-- External JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-    <script src="script.js"></script>
+    <!-- Projects Section -->
+    <div id="projects-section">
+        <h3>Projects</h3>
+        <div>
+            <label for="Project-input">Project Name</label>
+            <input type="text" id="Project-input" name="Project-input" placeholder="Project Name">
+        </div>
+        <div>
+            <label for="details">Project Details</label>
+            <textarea id="details" name="details" placeholder="Project Details"></textarea>
+        </div>
+        <div>
+            <label for="technologies">Technologies Used</label>
+            <input type="text" id="technologies" name="technologies" placeholder="Technologies Used">
+        </div>
+        <div>
+            <label for="url">Project URL</label>
+            <input type="url" id="url" name="url" placeholder="Project URL">
+        </div>
+        <button type="button" id="add-project" class="add-project">Add Project</button>
+    </div>
+
+    <!-- Generate Resume Button -->
+    <button type="button" id="generate-resume-button">Generate Resume PDF</button>
+
+                </form>
+                
 
 
+             <!-- resume design -->
+
+             <div class="resume-container">
+                <!-- Left Sidebar -->
+                <div class="left-sidebar">
+                    <img src="images.jpeg" alt="Profile Picture" class="profile-pic" id="display-image">
+
+                    <div class="display-about">
+                        <div class="profile" id="display-about-div">
+                          <i class="fa-solid fa-user"></i>
+                          <h2>About Me</h2>
+                        </div>
+                        <p id="display-about-p">I'm an aspiring software developer and AI enthusiast, driven to create impactful applications.</p>
+                      </div>
+
+                    <div id="display-contact-container">
+                        <div class="contact-div">
+                            <i class="fa-regular fa-address-book"></i><h2>Contact</h2></div>
+                        <div class="contact-item">
+                            <i class="fa-solid fa-phone"></i>
+                            <p>+123-456-7890</p>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fa-solid fa-envelope-open"></i>
+                            <p>tara378581@gmail.com</p>
+                           
+                        </div>
+                        <div class="contact-item">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <p>123 Anywhere Street, Any City</p>
+                        </div>
+                    </div>
+
+                    <div class="skills" id="display-skills">
+                        <h2><i class="fa-solid fa-gear"></i>Skills</h2>
+                        <ul>
+                            <li>Web Designer</li>
+                            <li>Frontend Developer</li>
+                            <li>UI/UX Designer</li>
+                            <li>Programmer</li>
+                            <li>Marketing</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="skills" id="display-language">
+                        <h2><i class="fa-solid fa-language"></i>Languages</h2>
+                        <ul>
+                            <li>English</li>
+                            <li>Urdu</li>
+                        </ul>
+                    </div>
+                </div>
+        
+                <!-- Right Section -->
+                <div class="right-section">
+                    <h1 id="display-name">Tahira Rajput</h1>
+                    <h3 id="display-tittle">Web Designer</h3>
+                    
+                    <section id="display-education-container">
+                        <h2>Education</h2>
+                        <div class="education" id="display-education">
+                            
+                            <p><strong  id="display-start-date">(2022
+                                - 
+                                <strong id="display-end-date"> 2023)</strong>
+                            </strong> Intermediate (FSc Pre-Engineering)</p>
+                        
+                        </div>
+                    </section>
+                    <hr>
+                    
+                    <section id="display-experience-conainer">
+                        <h2 id="display-experience">Experience</h2>
+                       
+                        
+                        <div class="experience">
+
+                            <ul id="display-exp-p">
+                                <li>Working on various personal projects, including e-commerce websites, dynamic resume builders, and web applications.</li>
+                                <li>Learning and implementing modern web technologies such as Next.js, TypeScript, Tailwind CSS, and more.</li>
+                                <li>Building a strong portfolio of projects to showcase skills in web development and UI/UX design.</li>
+                            </ul>
+                            <h3>Duration</h3>
+                         <p>
+                            <strong  id="display-exp-start-date">(2022  </strong>
+                            - 
+                            <strong id="display-exp-end-date"> 2023)</strong>
+                         </p>
+                      
+                            <h2 id="display-role">Role</h2>
+                            
+                       
+                           
+                            <ul id="dispplay-role-p">
+                                <li>Developed web applications and websites for clients using HTML, CSS, JavaScript, and TypeScript.</li>
+                                <li>Created customized, responsive, and visually appealing designs tailored to clients' needs.</li>
+                            </ul>
+                        </div>
+                    </section>
+                    <hr>
+                    
+                    <section >
+                        <h2>Projects</h2>
+                        <div class="projects" id="display-projects">
+                           <strong id="display-proj-name">Crystal Flower E-commerce Website</strong> -  <p>Designed and developed a responsive e-commerce site for "Crystal Flower".</p>
+                        </div>
+                    </section>
+
+                    <section >
+                        <h2>Certificaion</h2>
+                        <div class="certificaion" id="display-certificate">
+                           <strong id="display-certificate-name">Inter </strong> 
+                           <p><strong id="display-field">(Pre-Medical)</strong></p>
+                           
+                           <strong>Institute</strong>
+                           <p id="display-institute">15/c College</p>
+                        </div>
+                    </section>
 
 
+                    <!-- Download Button -->
+                    <a href="resume.pdf" download="Tahira_Rajput_Resume.pdf">
+                        <button class="download-btn">Download Resume</button>
+                    </a>
+                </div>
+            </div>
+        
+        <!-- //////////////////////////////////////////////// -->
+
+       
+
+    </div>
 <!-- Footer Section -->
 <footer>
     <div class="footer-content">
@@ -194,11 +319,17 @@
         </div>
     </div>
     <div class="footer-bottom">
-        <p>&copy; 2024 Resume Builder. All Rights Reserved. | Designed by Tahira Rajput</p>
+        <p>&copy; 2024 Resume Builder. All Rights Reserved. | Designed by <span class="designer"> Tahira Rajput</span></p>
 
     </div>
 </footer>
 
-<script src="resume.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.8.0/html2pdf.bundle.min.js" integrity="sha512-w3u9q/DeneCSwUDjhiMNibTRh/1i/gScBVp2imNVAMCt6cUHIw6xzhzcPFIaL3Q1EbI2l+nu17q2aLJJLo4ZYg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+
+<script src="script.js"></script>
+
 </body>
 </html>
