@@ -199,6 +199,15 @@ button:hover {
     border: 1px solid #ddd;
 }
 
+.profile-img {
+    background-position: center;
+    background-size: cover;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
 .left-sidebar {
     background-color: #272626;
     color: #faf7f7;
